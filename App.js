@@ -7,6 +7,9 @@ export default function App() {
       <View style={styles.header}>
         <Text>Open up App.js to start working on your app!</Text>
       </View>
+      <View>
+        <Text style={styles.hello}>Hello there shee</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -20,6 +23,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   header:{
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+    color: 'white',
+    padding: 20,
+  },
+  hello:{
+    backgroundColor: 'pink',
+    padding: 10,
   }
 });
