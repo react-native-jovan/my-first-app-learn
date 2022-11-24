@@ -1,14 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{useState} from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [name,setName]=useState('Job')
+  function handleName(){
+    setName('selected')
+  }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text>My name is {name}</Text>
       </View>
       <View>
-        <Text style={styles.hello}>Hello there shee</Text>
+        <Text style={styles.button}>
+          <Button title="click Me" onPress={handleName}/>
+        </Text>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -27,8 +34,7 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 20,
   },
-  hello:{
-    backgroundColor: 'pink',
-    padding: 10,
+  button:{
+    marginTop: 20
   }
 });
