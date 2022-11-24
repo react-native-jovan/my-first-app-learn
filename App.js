@@ -21,12 +21,14 @@ export default function App() {
       <View>
         <Text>Enter Name</Text>
         <TextInput 
+        multiline
         style={styles.input} 
         placeholder='eg Name'
         onChangeText={(val)=>setName(val)}
         />
         <Text>Enter Age</Text>
         <TextInput 
+        keyboardType='numeric'
         style={styles.input} 
         placeholder='eg Age'
         onChangeText={(val)=>setAge(val)}
