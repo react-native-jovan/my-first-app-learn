@@ -71,11 +71,11 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    paddingTop: 40,
-    paddingHorizontal:20
+    // flex: 1,
+    // backgroundColor: '#fff',
+    // alignItems: 'center',
+    // paddingTop: 40,
+    // // paddingHorizontal:20
   },
   header:{
     backgroundColor: 'red',
@@ -86,13 +86,12 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   input:{
-    borderWidth: 1,
+    
     borderColor:'red',
-    padding: 8,
+    padding: 30,
     margin: 10,
-    width: 200,
     backgroundColor:'pink',
-    borderRadius: 20,
+
     fontSize: 16
   },
 
