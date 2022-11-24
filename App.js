@@ -22,6 +22,7 @@ export default function App() {
         <Text>Enter Name</Text>
         <TextInput 
         multiline
+        autoCapitalize='characters'
         style={styles.input} 
         placeholder='eg Name'
         onChangeText={(val)=>setName(val)}
