@@ -19,7 +19,17 @@ export default function App() {
       </View>
       <View>
         <Text>Enter Name</Text>
-        <TextInput style={styles.input}/>
+        <TextInput 
+        style={styles.input} 
+        placeholder='eg Name'
+        onChangeText={(val)=>setName(val)}
+        />
+        <Text>Enter Age</Text>
+        <TextInput 
+        style={styles.input} 
+        placeholder='eg Name'
+        onChangeText={(val)=>setName(val)}
+        />
       </View>
       <StatusBar style="auto" />
     </View>
