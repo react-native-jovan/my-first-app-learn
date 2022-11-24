@@ -4,13 +4,14 @@ import { Button, StyleSheet, Text, View,TextInput } from 'react-native';
 
 export default function App() {
   const [name,setName]=useState('Job')
+  const [age,setAge]=useState(0)
   function handleName(){
     setName('selected')
   }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text>My name is {name}</Text>
+        <Text>My name is {name} and im {age} years old</Text>
       </View>
       <View>
         <Text style={styles.button}>
@@ -27,8 +28,8 @@ export default function App() {
         <Text>Enter Age</Text>
         <TextInput 
         style={styles.input} 
-        placeholder='eg Name'
-        onChangeText={(val)=>setName(val)}
+        placeholder='eg Age'
+        onChangeText={(val)=>setAge(val)}
         />
       </View>
       <StatusBar style="auto" />
