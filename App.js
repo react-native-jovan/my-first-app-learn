@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
-import { Button, StyleSheet, Text, View,TextInput } from 'react-native';
+import { Button, StyleSheet, Text, View,TextInput,ScrollView } from 'react-native';
 
 export default function App() {
   const [name,setName]=useState('Job')
@@ -54,6 +54,7 @@ export default function App() {
         onChangeText={(val)=>setAge(val)}
         />
       </View> */}
+      <ScrollView>
       {
         people.map((item)=>{
           return (
@@ -62,7 +63,7 @@ export default function App() {
             </View>
           )
         })
-      }
+      }</ScrollView>
       <StatusBar style="auto" />
     </View>
   );
