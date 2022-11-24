@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View,TextInput } from 'react-native';
 
 export default function App() {
   const [name,setName]=useState('Job')
@@ -16,6 +16,10 @@ export default function App() {
         <Text style={styles.button}>
           <Button title="click Me" onPress={handleName}/>
         </Text>
+      </View>
+      <View>
+        <Text>Enter Name</Text>
+        <TextInput style={styles.input}/>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -36,5 +40,12 @@ const styles = StyleSheet.create({
   },
   button:{
     marginTop: 20
-  }
+  },
+  input:{
+    borderWidth: 1,
+    borderColor:'red',
+    padding: 8,
+    width: 200
+  },
+
 });
