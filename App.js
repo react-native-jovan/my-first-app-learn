@@ -5,6 +5,13 @@ import { Button, StyleSheet, Text, View,TextInput } from 'react-native';
 export default function App() {
   const [name,setName]=useState('Job')
   const [age,setAge]=useState(0)
+  const [people,setPeople]=useState([
+    {name: 'John',key:'1'},
+    {name: 'carry',key:'2'},
+    {name: 'mario',key:'3'},
+    {name: 'sharon',key:'4'},
+    {name: 'kenedy',key:'5'},
+  ])
   function handleName(){
     setName('selected')
   }
@@ -23,6 +30,7 @@ export default function App() {
         <TextInput 
         multiline
         autoCapitalize='characters'
+        autoComplete='name'
         style={styles.input} 
         placeholder='eg Name'
         onChangeText={(val)=>setName(val)}
@@ -45,7 +53,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 40,
+    paddingHorizontal:20
   },
   header:{
     backgroundColor: 'red',
