@@ -17,7 +17,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
+      {/* <View style={styles.header}>
         <Text>My name is {name} and im {age} years old</Text>
       </View>
       <View>
@@ -42,7 +42,16 @@ export default function App() {
         placeholder='eg Age'
         onChangeText={(val)=>setAge(val)}
         />
-      </View>
+      </View> */}
+      {
+        people.map((item)=>{
+          return (
+            <View key={item.key}>
+              <Text style={styles.input}>{item.name}</Text>
+            </View>
+          )
+        })
+      }
       <StatusBar style="auto" />
     </View>
   );
@@ -68,6 +77,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor:'red',
     padding: 8,
+    margin: 10,
     width: 200
   },
 
