@@ -11,6 +11,17 @@ export default function App() {
     {name: 'mario',key:'3'},
     {name: 'sharon',key:'4'},
     {name: 'kenedy',key:'5'},
+    {name: 'John',key:'6'},
+    {name: 'carry',key:'7'},
+    {name: 'mario',key:'8'},
+    {name: 'sharon',key:'9'},
+    {name: 'kenedy',key:'10'},
+    {name: 'kenedy',key:'11'},
+    {name: 'John',key:'12'},
+    {name: 'carry',key:'13'},
+    {name: 'mario',key:'14'},
+    {name: 'sharon',key:'15'},
+    {name: 'kenedy',key:'16'},
   ])
   function handleName(){
     setName('selected')
@@ -78,7 +89,10 @@ const styles = StyleSheet.create({
     borderColor:'red',
     padding: 8,
     margin: 10,
-    width: 200
+    width: 200,
+    backgroundColor:'pink',
+    borderRadius: 20,
+    fontSize: 16
   },
 
 });
