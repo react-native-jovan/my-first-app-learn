@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
-import { Button, StyleSheet, Text, View,TextInput,ScrollView,FlatList,TouchableOpacity } from 'react-native';
+import { Button, StyleSheet, Text, View,TextInput,ScrollView,FlatList,TouchableOpacity,Alert,TouchableWithoutFeedback ,Keyboard} from 'react-native';
 import AddTodo from './components/AddTodo';
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
@@ -12,7 +12,9 @@ export default function App() {
     {text:'play on the switch',key:3},
   ]);
   function handleTouch(key){
-    alert( ` You want to delete ${id}`)
+    Alert.alert( `YOU SURE?`,'This todo will be deleted',[
+      {text: 'Understood'}
+    ])
     setTodo((prevTodo)=>{
       return prevTodo.filter(todo=>todo.key !== key);
     })
@@ -28,10 +30,12 @@ function submitTodo(text){
     })
     
   }else{
-    alert(`length of text is short`)
+    Alert.alert(`OOPS!`,'Todos must be 4char long ',
+    [{text:'Understood',onPress: ()=>{console.log('alert closed');}}])
   }
 }
   return(
+    <TouchableWithoutFeedback onPress={()=>{Keyboard.dismiss()}}>
     <View style={styles.container}>
 
       {/* header */}
@@ -48,7 +52,7 @@ function submitTodo(text){
           />
         </View>
       </View>
-    </View>
+    </View></TouchableWithoutFeedback>
   )
 }
 
