@@ -58,7 +58,7 @@ function submitTodo(text){
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     // backgroundColor: '#fff',
     // alignItems: 'center',
     paddingTop: 40,
@@ -82,10 +82,12 @@ const styles = StyleSheet.create({
     fontSize: 16
   },
   content:{
-    padding:40
+    padding:40,
+    flex:1,
   },
   list:{
-    marginTop: 20
+    marginTop: 20,
+    flex:1,
   }
 
 });
