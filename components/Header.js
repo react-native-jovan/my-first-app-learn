@@ -12,12 +12,13 @@ const styles= StyleSheet.create(
     {
         header:{
             height: 80,
-            paddingTop: 38,
+            paddingTop: 30,
             backgroundColor:'coral'
         },
         title:{
             textAlign: 'center',
-            color:'white'
+            color:'white',
+            fontSize:20
         }
 
            
