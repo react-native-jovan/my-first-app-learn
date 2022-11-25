@@ -1,7 +1,7 @@
 import { View, Text ,StyleSheet, TouchableOpacity,TextInput,Button} from 'react-native'
 import React,{useState} from 'react'
 
-export default function AddTodo() {
+export default function AddTodo({submitHandle}) {
     const [text,setText]=useState('')
 
     function changeHanhler(val){
@@ -15,7 +15,7 @@ export default function AddTodo() {
       onChangeText={changeHanhler}
       />
       {/* <Text style={styles.button}><Button onPress={()=>{alert(text)}} title='Add this todo' color='coral' /></Text> */}
-      <Button onPress={()=>{alert(text)}} title='Add this todo' color='coral' />
+      <Button onPress={()=>{submitHandle(text)}} title='Add this todo' color='coral' />
       
     </View>
   )
@@ -33,12 +33,12 @@ const styles= StyleSheet.create(
             borderBottomColor:'red'
         },
         button:{
-            marginHorizontal:10,
+            // marginHorizontal:10,
             
         },
         all:{
             
-            marginHorizontal:10
+            // marginHorizontal:10
 
         }
 

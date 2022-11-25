@@ -17,13 +17,22 @@ export default function App() {
       return prevTodo.filter(todo=>todo.key !== key);
     })
 }
+function submitTodo(text){
+  setTodo((prevTodo)=>{
+    return [
+      ...prevTodo,
+      {text: text, key: Math.random().toString()}
+    ]
+  })
+}
   return(
     <View style={styles.container}>
 
       {/* header */}
       <Header/>
-      <AddTodo/>
+      
       <View style={styles.content}>
+      <AddTodo submitHandle={submitTodo}/>
         <View style={styles.list}>
           <FlatList
           data={todo}
@@ -43,7 +52,7 @@ const styles = StyleSheet.create({
     // backgroundColor: '#fff',
     // alignItems: 'center',
     paddingTop: 40,
-    // // paddingHorizontal:20
+    // paddingHorizontal:20
   },
   // header:{
   //   backgroundColor: 'red',
