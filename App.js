@@ -12,18 +12,24 @@ export default function App() {
     {text:'play on the switch',key:3},
   ]);
   function handleTouch(key){
-    // alert(id)
+    alert( ` You want to delete ${id}`)
     setTodo((prevTodo)=>{
       return prevTodo.filter(todo=>todo.key !== key);
     })
 }
 function submitTodo(text){
-  setTodo((prevTodo)=>{
-    return [
-      ...prevTodo,
-      {text: text, key: Math.random().toString()}
-    ]
-  })
+  if (text.length>4) {
+    setTodo((prevTodo)=>{
+      return [
+        {text: text, key: Math.random().toString()},
+        ...prevTodo
+        
+      ]
+    })
+    
+  }else{
+    alert(`length of text is short`)
+  }
 }
   return(
     <View style={styles.container}>
