@@ -9,7 +9,13 @@ export default function App() {
     {text:'buy coffee',key:1},
     {text:'create app',key:2},
     {text:'play on the switch',key:3},
-  ])
+  ]);
+  function handleTouch(key){
+    // alert(id)
+    setTodo((prevTodo)=>{
+      return prevTodo.filter(todo=>todo.key !== key);
+    })
+}
   return(
     <View style={styles.container}>
 
@@ -20,7 +26,7 @@ export default function App() {
           <FlatList
           data={todo}
           renderItem={({item})=>(
-            <TodoItem item={item}/>
+            <TodoItem item={item} onHandleClick={handleTouch}/>
           )}
           />
         </View>
