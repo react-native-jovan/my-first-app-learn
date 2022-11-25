@@ -45,6 +45,8 @@ function submitTodo(text){
       <AddTodo submitHandle={submitTodo}/>
         <View style={styles.list}>
           <FlatList
+          // horizontal
+          // showsHorizontalScrollIndicator={false}
           data={todo}
           renderItem={({item})=>(
             <TodoItem item={item} onHandleClick={handleTouch}/>
