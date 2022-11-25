@@ -16,11 +16,15 @@ export default function TodoItem({item,onHandleClick}) {
 const styles = StyleSheet.create({
     input:{
     
-        borderColor:'red',
-        padding: 30,
+        // borderColor:'red',
+        padding: 20,
         margin: 10,
-        backgroundColor:'pink',
+        // backgroundColor:'pink',
         fontSize: 16,
+        borderColor:'gray',
+        borderWidth: 1,
+        borderStyle:'dashed',
+        borderRadius: 10,
         display: 'flex',
         flexDirection: 'row',
         justifyContent:'space-between'
