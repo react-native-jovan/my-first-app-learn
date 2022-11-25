@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
 import { Button, StyleSheet, Text, View,TextInput,ScrollView,FlatList,TouchableOpacity } from 'react-native';
+import AddTodo from './components/AddTodo';
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 
@@ -21,6 +22,7 @@ export default function App() {
 
       {/* header */}
       <Header/>
+      <AddTodo/>
       <View style={styles.content}>
         <View style={styles.list}>
           <FlatList
